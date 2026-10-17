@@ -145,7 +145,7 @@ endif()
 
 if(NOT LIBKINETO_NOROCTRACER)
   list(APPEND KINETO_DEFINITIONS "HAS_ROCTRACER")
-  target_compile_definitions(kineto_base PRIVATE "__HIP_PLATFORM_HCC__")
+  target_compile_definitions(kineto_base PRIVATE "__HIP_PLATFORM_AMD__")
   target_compile_definitions(kineto_base PRIVATE "__HIP_PLATFORM_AMD__")
 endif()
 
