@@ -6,6 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// Parse libstdc++ chrono/format before HIP defines its __noinline__ macro.
+#include <chrono>
+
 #include "RocprofLogger.h"
 
 #include <rocprofiler-sdk/context.h>
@@ -17,7 +20,6 @@
 
 #include <time.h>
 #include <unistd.h>
-#include <chrono>
 #include <cstring>
 #include <mutex>
 

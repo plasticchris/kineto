@@ -6,10 +6,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// Parse libstdc++ chrono/format before HIP defines its __noinline__ macro.
+#include <chrono>
+
 #include "RocprofActivityApi.h"
 
 #include <time.h>
-#include <chrono>
 #include <cstdint>
 #include <cstring>
 #include <functional>
